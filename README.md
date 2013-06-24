@@ -1,1 +1,1 @@
-Estudo Designer Patterns
+Estudos Designer Patterns
