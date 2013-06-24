@@ -8,23 +8,23 @@ function __autoload($class)
 }
 
 $emissor1 = new EmissorSMS();
-$emissor1->envia('K19 Treinamentos...');
+echo $emissor1->envia('K19 Treinamentos...') . '<br />';
 	
 $emissor2 = new EmissorEmail();
-$emissor2->envia('K19 Treinamentos...');
+echo $emissor2->envia('K19 Treinamentos...') . '<br />';
 
 $emissor3 = new EmissorJMS();
-$emissor3->envia('K19 Treinamentos...');
-
+echo $emissor3->envia('K19 Treinamentos...') . '<br />';
 
 echo '<br /><br />----------------------- ultilizando a classe EmissorCreator -----------------------------<br />';
+
 $creator = new EmissorCreator();
 //SMS
 $emissor1 = $creator->create(EmissorCreator::SMS);
-$emissor1->envia('K19 Treinamentos...');
+echo $emissor1->envia('K19 Treinamentos...') . '<br />';
 //EMAIL
 $emissor2 = $creator->create(EmissorCreator::EMAIL);
-$emissor2->envia('K19 Treinamentos...');
+echo $emissor2->envia('K19 Treinamentos...') . '<br />';;
 //JMS
 $emissor3 = $creator->create(EmissorCreator::JMS);
-$emissor3->envia('K19 Treinamentos...');
+echo $emissor3->envia('K19 Treinamentos...') . '<br />';
